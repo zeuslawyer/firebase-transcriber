@@ -1,0 +1,22 @@
+{
+  "name": "firebase-transcriber",
+  "version": "0.0.1",
+  "description": "transcriber for video and audio recordings saved to GCS buckets",
+  "repository": "https://github.com/zeuslawyer/firebase-transcriber",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zeuslawyer",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
