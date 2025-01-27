@@ -1,3 +1,17 @@
-import fs from "fs";
+import { initializeApp } from "firebase/app";
+import { Analytics, getAnalytics } from "firebase/analytics";
+
+import { firebaseConfig } from "./configs/loadenv";
+
 console.log("LFG! 🔥");
-console.log(fs.readFileSync("src/index.ts", "utf8"));
+
+const app = initializeApp(firebaseConfig);
+
+// Check env vars are available
+for (const key in firebaseConfig) {
+  if (firebaseConfig[key as keyof typeof firebaseConfig] === undefined) {
+    throw Error(`${key} is not defined`);
+  }
+}
+
+
